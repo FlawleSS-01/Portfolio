@@ -287,6 +287,14 @@ html {
   }
 }
 
+.menu__link.menu-active {
+  color: #fff;
+}
+
+.menu__link.menu-active::before {
+  opacity: 1;
+}
+
 .menu__link--github {
   background: rgba(255, 107, 53, 0.1);
   border: 1px solid var(--border-color);
