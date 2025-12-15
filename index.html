@@ -34,66 +34,183 @@
     <div class="wrapper">
       <header class="header">
         <div class="header__container">
-          <img
-            class="header__logo"
-            src="img/svg/logo.svg"
-            alt="Logo Nick.P"
-            width="140"
-            height="70"
-          />
+          <a href="#home" class="header__logo-link">
+            <img
+              class="header__logo"
+              src="img/svg/logo.svg"
+              alt="Logo Nick.P"
+              width="140"
+              height="70"
+            />
+          </a>
           <nav class="header__menu menu">
             <ul class="menu__list ul">
               <li class="menu__item">
-                <a href="index.html#home" class="menu__link">Главная</a>
+                <a href="#home" class="menu__link" data-text="Главная">Главная</a>
               </li>
               <li class="menu__item">
-                <a href="index.html#experience" class="menu__link">Опыт</a>
-              </li>
-							<li class="menu__item">
-                <a href="index.html#about" class="menu__link">Обо мне</a>
+                <a href="#experience" class="menu__link" data-text="Опыт">Опыт</a>
               </li>
               <li class="menu__item">
-                <a href="index.html#skills" class="menu__link">Навыки</a>
-              </li>
-							<li class="menu__item">
-                <a href="index.html#work" class="menu__link">Проекты</a>
+                <a href="#skills" class="menu__link" data-text="Навыки">Навыки</a>
               </li>
               <li class="menu__item">
-                <a href="index.html#contact" class="menu__link">Контакты</a>
+                <a href="#agency" class="menu__link" data-text="Агентство">Агентство</a>
               </li>
               <li class="menu__item">
-                <a href="https://github.com/FlawleSS-01" target="_blank" rel="noopener" class="menu__link">GitHub</a>
+                <a href="#work" class="menu__link" data-text="Проекты">Проекты</a>
+              </li>
+              <li class="menu__item">
+                <a href="#contact" class="menu__link" data-text="Контакты">Контакты</a>
+              </li>
+              <li class="menu__item">
+                <a href="https://github.com/FlawleSS-01" target="_blank" rel="noopener" class="menu__link menu__link--github" data-text="GitHub">
+                  GitHub
+                </a>
               </li>
             </ul>
           </nav>
           <button
             type="button"
-            class="butger-btn"
+            class="burger-btn"
             aria-label="open menu"
-            aria-expanded="false"
           >
-            <span></span>
+            <span class="burger-btn__line"></span>
+            <span class="burger-btn__line"></span>
+            <span class="burger-btn__line"></span>
           </button>
         </div>
       </header>
+      
+      <!-- Mobile Menu Overlay -->
+      <div class="mobile-menu-overlay">
+        <nav class="mobile-menu">
+          <ul class="mobile-menu__list">
+            <li class="mobile-menu__item">
+              <a href="#home" class="mobile-menu__link">Главная</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="#experience" class="mobile-menu__link">Опыт</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="#skills" class="mobile-menu__link">Навыки</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="#agency" class="mobile-menu__link">Агентство</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="#work" class="mobile-menu__link">Проекты</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="#contact" class="mobile-menu__link">Контакты</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="https://github.com/FlawleSS-01" target="_blank" rel="noopener" class="mobile-menu__link">
+                GitHub
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      
       <main class="page">
-        <section id="home" class="page__top top">
-          <div class="top__wrap">
-            <picture class="top__img">
-              <img
-                src="img/top/01.jpg"
-                alt="personal"
-                width="750"
-                height="650"
-                loading="lazy"
-            /></picture>
-            <div class="top__text">
-              <h1 class="top__titile">
-                Перекрест Никита<span>Frontend-разработчик</span>
-              </h1>
-              <p class="top__description">
-                "Пока другие тратят часы на исполнение, он может сделать ту же задачу за минуты" — <i>Михаил Алмазов, МСТ</i>
-              </p>
+        <section id="home" class="hero">
+          <div class="hero__bg">
+            <div class="hero__gradient hero__gradient--1"></div>
+            <div class="hero__gradient hero__gradient--2"></div>
+            <div class="hero__particles"></div>
+          </div>
+          
+          <div class="hero__container">
+            <div class="hero__content">
+              <div class="hero__left">
+                <div class="hero__badge">
+                  <span class="hero__badge-dot"></span>
+                  <span class="hero__badge-text">Доступен для работы</span>
+                </div>
+                
+                <h1 class="hero__title">
+                  <span class="hero__title-line hero__title-line--1">Никита</span>
+                  <span class="hero__title-line hero__title-line--2">Перекрест</span>
+                </h1>
+                
+                <div class="hero__role">
+                  <span class="hero__role-bracket">&lt;</span>
+                  <span class="hero__role-text">Frontend-разработчик</span>
+                  <span class="hero__role-bracket">/&gt;</span>
+                </div>
+
+								<p class="hero__description">
+									Создаю современные веб-приложения с фокусом на производительность, 
+									чистый код и отличный пользовательский опыт. React, TypeScript, Next.js.
+								</p>
+
+                
+                <div class="hero__actions">
+                  <a href="#contact" class="hero__btn hero__btn--primary">
+                    <span>Связаться</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+                  <a href="#work" class="hero__btn hero__btn--secondary">
+                    <span>Смотреть проекты</span>
+                  </a>
+                </div>
+                
+                <div class="hero__stats">
+                  <div class="hero__stat">
+                    <span class="hero__stat-number">3+</span>
+                    <span class="hero__stat-label">года опыта</span>
+                  </div>
+                  <div class="hero__stat-divider"></div>
+                  <div class="hero__stat">
+                    <span class="hero__stat-number">120+</span>
+                    <span class="hero__stat-label">проектов</span>
+                  </div>
+                  <div class="hero__stat-divider"></div>
+                  <div class="hero__stat">
+                    <span class="hero__stat-number">97%</span>
+                    <span class="hero__stat-label">довольных клиентов</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="hero__right">
+                <div class="hero__image-wrapper">
+                  <div class="hero__image-glow"></div>
+                  <div class="hero__image-border"></div>
+                  <picture class="hero__image">
+                    <img
+                      src="img/top/я.jpg"
+                      alt="Никита Перекрест - Frontend разработчик"
+                      width="500"
+                      height="500"
+                    />
+                  </picture>
+                  <div class="hero__image-badge">
+                    <span class="hero__image-badge-icon">⚡</span>
+                    <span class="hero__image-badge-text">Fast & Reliable</span>
+                  </div>
+                </div>
+                
+                <div class="hero__quote">
+                  <svg class="hero__quote-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/>
+                  </svg>
+                  <blockquote class="hero__quote-text">
+                    Пока другие тратят часы на исполнение, он может сделать ту же задачу за минуты
+                  </blockquote>
+                  <cite class="hero__quote-author">— Михаил Алмазов, МСТ</cite>
+                </div>
+              </div>
+            </div>
+            
+            <div class="hero__scroll">
+              <span class="hero__scroll-text">Scroll</span>
+              <div class="hero__scroll-line">
+                <div class="hero__scroll-dot"></div>
+              </div>
             </div>
           </div>
         </section>
@@ -105,7 +222,7 @@
           <div class="experience__container">
             <h2 class="experience__title title">Опыт работы</h2>
             <h3 class="experience__subtitle subtitle">
-              Мои прошлые места работы
+              Прошлые места работы
             </h3>
             <ol class="experience__list">
               <li class="experience__item item-experience">
@@ -123,7 +240,7 @@
                   <span class="blue">MeatSnack</span>, Frontend-разработчик
                 </h4>
                 <p class="item-experience__description">
-                  Разработка и продвижение интернет-магазина мясных закусок на OpenCart для польского рынка.
+                  Разработка, продвижение и обслуживание интернет-магазинов на OpenCart для польского рынка.
                 </p>
               </li>
               <li class="experience__item item-experience">
@@ -135,27 +252,6 @@
                 </p>
               </li>
             </ol>
-          </div>
-        </section>
-        <section id="about" class="page__value value">
-          <div class="value__container">
-            <div class="value__text">
-              <h3 class="value__subtitle subtitle">Философия и ценности</h3>
-              <p class="value__description">
-                Верю в безграничный потенциал новых технологий и непрерывное развитие в сфере разработки. Для меня важно не только создавать рабочие решения, но и находить инновационные подходы к задачам, чтобы делать цифровой мир лучше каждый день.
-              </p>
-              <a href="index.html#skillset" class="value__btn btn"
-                >Больше про меня</a
-              >
-            </div>
-            <picture class="value__img">
-              <img
-                src="img/value/01.jpg"
-                alt="a picture of a glass ball in a hand against a background of trees"
-                width="720"
-                height="600"
-                loading="lazy"
-            /></picture>
           </div>
         </section>
         <section id="skills" class="page__skillset skillset">
@@ -224,65 +320,474 @@
                   width="40"
                   height="40"
                 />
-                <h4 class="item-skillset__title">SQL</h4>
+                <h4 class="item-skillset__title">HTML/CSS/JS</h4>
                 <p class="item-skillset__description">
-                  Проектирую и оптимизирую базы данных, пишу эффективные запросы
-                  и обеспечиваю целостность данных, что способствует созданию
-                  надежных и быстрых приложений.
+                  Верстка сайтов любых типов и сложности, от простых лендингов и визиток 
+									до сложных многостраничных сайтов и интернет-магазинов. 
+									Хорошо знаком с SEO оптимизацией + продвижением.
                 </p>
               </div>
             </div>
           </div>
         </section>
-        <div class="page__swiper swiper">
-          <div class="swiper__container swiper-wrapper">
-            <div class="swiper__img swiper-slide">
-              <img
-                src="img/svg/swiper/01.svg"
-                alt="js logo"
-                width="70"
-                height="70"
-              />
+
+        <!-- RXT Marketing Agency Section -->
+        <section id="agency" class="page__agency agency section">
+          <div class="agency__container">
+            <div class="agency__content">
+              <!-- Left Side - Info & Filters -->
+              <div class="agency__info">
+								<h2 class="agency__title title">Основатель</h2>
+                <div class="agency__logo-wrap">
+                  <img 
+                    class="agency__logo" 
+                    src="img/rxt/logo_black.png" 
+                    alt="RXT Marketing Agency" 
+                    loading="lazy"
+                  />
+                </div>
+                <h2 class="agency__title title">МАРКЕТИНГОВОЕ АГЕНТСТВО</h2>
+                <p class="agency__description">
+                  Комплексное продвижение бизнеса в интернете. Создаём уникальные сайты, 
+                  разрабатываем фирменный стиль, дизайн полиграфии и визиток. 
+                  Каждый проект — это индивидуальный подход, внимание к деталям 
+                  и отражение стратегии win/win на практике.
+                </p>
+
+                <a 
+                  href="https://rxt.agency/"
+                  target="_blank"
+                  class="agency__btn btn"
+                  style="margin-top:18px;display:inline-block;"
+                >
+                  Наш сайт
+                </a>
+
+                <div class="agency__filter">
+                  <button class="agency__filter-btn active" data-filter="sites">
+                    <span class="agency__filter-icon">🌐</span>
+                    Сайты
+                  </button>
+                  <button class="agency__filter-btn" data-filter="cards">
+                    <span class="agency__filter-icon">💳</span>
+                    Визитки
+                  </button>
+                  <button class="agency__filter-btn" data-filter="blanks">
+                    <span class="agency__filter-icon">📋</span>
+                    Полиграфия
+                  </button>
+                </div>
+              </div>
+
+              <!-- Right Side - Projects Grid -->
+              <div class="agency__projects">
+                <div class="agency__grid">
+                  <!-- Sites (Horizontal) -->
+                  <div class="agency__item" data-category="sites">
+                    <img src="img/rxt/sites/Видео_Контур.png" alt="Видео Контур" loading="lazy" />
+                    <div class="agency__item-overlay">
+                      <span class="agency__item-title">Видео Контур</span>
+                      <span class="agency__item-category">Сайт</span>
+                    </div>
+                  </div>
+                  <div class="agency__item" data-category="sites">
+                    <img src="img/rxt/sites/Грузоперевозки.jpg" alt="Грузоперевозки" loading="lazy" />
+                    <div class="agency__item-overlay">
+                      <span class="agency__item-title">Грузоперевозки</span>
+                      <span class="agency__item-category">Сайт</span>
+                    </div>
+                  </div>
+                  <div class="agency__item" data-category="sites">
+                    <img src="img/rxt/sites/Канализация.jpg" alt="Канализация" loading="lazy" />
+                    <div class="agency__item-overlay">
+                      <span class="agency__item-title">Канализация</span>
+                      <span class="agency__item-category">Сайт</span>
+                    </div>
+                  </div>
+                  <div class="agency__item" data-category="sites">
+                    <img src="img/rxt/sites/Квартиры.png" alt="Квартиры" loading="lazy" />
+                    <div class="agency__item-overlay">
+                      <span class="agency__item-title">Квартиры</span>
+                      <span class="agency__item-category">Сайт</span>
+                    </div>
+                  </div>
+                  <div class="agency__item" data-category="sites">
+                    <img src="img/rxt/sites/Недвижимость.jpg" alt="Недвижимость" loading="lazy" />
+                    <div class="agency__item-overlay">
+                      <span class="agency__item-title">Недвижимость</span>
+                      <span class="agency__item-category">Сайт</span>
+                    </div>
+                  </div>
+                  <div class="agency__item" data-category="sites">
+                    <img src="img/rxt/sites/Одежда.jpg" alt="Одежда" loading="lazy" />
+                    <div class="agency__item-overlay">
+                      <span class="agency__item-title">Одежда</span>
+                      <span class="agency__item-category">Сайт</span>
+                    </div>
+                  </div>
+                  <div class="agency__item" data-category="sites">
+                    <img src="img/rxt/sites/ООО «ГранТекс».jpg" alt="ООО ГранТекс" loading="lazy" />
+                    <div class="agency__item-overlay">
+                      <span class="agency__item-title">ООО «ГранТекс»</span>
+                      <span class="agency__item-category">Сайт</span>
+                    </div>
+                  </div>
+                  <div class="agency__item" data-category="sites">
+                    <img src="img/rxt/sites/ООО_«Асгард».jpg" alt="ООО Асгард" loading="lazy" />
+                    <div class="agency__item-overlay">
+                      <span class="agency__item-title">ООО «Асгард»</span>
+                      <span class="agency__item-category">Сайт</span>
+                    </div>
+                  </div>
+                  <div class="agency__item" data-category="sites">
+                    <img src="img/rxt/sites/Пансионат_Салют.jpg" alt="Пансионат Салют" loading="lazy" />
+                    <div class="agency__item-overlay">
+                      <span class="agency__item-title">Пансионат «Салют»</span>
+                      <span class="agency__item-category">Сайт</span>
+                    </div>
+                  </div>
+                  <div class="agency__item" data-category="sites">
+                    <img src="img/rxt/sites/Печатное_оборудование.jpg" alt="Печатное оборудование" loading="lazy" />
+                    <div class="agency__item-overlay">
+                      <span class="agency__item-title">Печатное оборудование</span>
+                      <span class="agency__item-category">Сайт</span>
+                    </div>
+                  </div>
+                  <div class="agency__item" data-category="sites">
+                    <img src="img/rxt/sites/Ресторан_Кахури.jpg" alt="Ресторан Кахури" loading="lazy" />
+                    <div class="agency__item-overlay">
+                      <span class="agency__item-title">Ресторан «Кахури»</span>
+                      <span class="agency__item-category">Сайт</span>
+                    </div>
+                  </div>
+                  <div class="agency__item" data-category="sites">
+                    <img src="img/rxt/sites/Спецтехника.png" alt="Спецтехника" loading="lazy" />
+                    <div class="agency__item-overlay">
+                      <span class="agency__item-title">Спецтехника</span>
+                      <span class="agency__item-category">Сайт</span>
+                    </div>
+                  </div>
+                  <div class="agency__item" data-category="sites">
+                    <img src="img/rxt/sites/Чайный_магазин.png" alt="Чайный магазин" loading="lazy" />
+                    <div class="agency__item-overlay">
+                      <span class="agency__item-title">Чайный магазин</span>
+                      <span class="agency__item-category">Сайт</span>
+                    </div>
+                  </div>
+                  <div class="agency__item" data-category="sites">
+                    <img src="img/rxt/sites/Шиномонтаж.jpg" alt="Шиномонтаж" loading="lazy" />
+                    <div class="agency__item-overlay">
+                      <span class="agency__item-title">Шиномонтаж</span>
+                      <span class="agency__item-category">Сайт</span>
+                    </div>
+                  </div>
+                  <div class="agency__item" data-category="sites">
+                    <img src="img/rxt/sites/Эвакуатор.jpg" alt="Эвакуатор" loading="lazy" />
+                    <div class="agency__item-overlay">
+                      <span class="agency__item-title">Эвакуатор</span>
+                      <span class="agency__item-category">Сайт</span>
+                    </div>
+                  </div>
+                  <div class="agency__item" data-category="sites">
+                    <img src="img/rxt/sites/Электромонтаж.jpg" alt="Электромонтаж" loading="lazy" />
+                    <div class="agency__item-overlay">
+                      <span class="agency__item-title">Электромонтаж</span>
+                      <span class="agency__item-category">Сайт</span>
+                    </div>
+                  </div>
+                  <div class="agency__item" data-category="sites">
+                    <img src="img/rxt/sites/Юридические_услуги.jpg" alt="Юридические услуги" loading="lazy" />
+                    <div class="agency__item-overlay">
+                      <span class="agency__item-title">Юридические услуги</span>
+                      <span class="agency__item-category">Сайт</span>
+                    </div>
+                  </div>
+                  <div class="agency__item" data-category="sites">
+                    <img src="img/rxt/sites/ЮрУслуги.jpg" alt="ЮрУслуги" loading="lazy" />
+                    <div class="agency__item-overlay">
+                      <span class="agency__item-title">ЮрУслуги</span>
+                      <span class="agency__item-category">Сайт</span>
+                    </div>
+                  </div>
+
+                  <!-- Cards (Horizontal) -->
+                  <div class="agency__item" data-category="cards">
+                    <img src="img/rxt/cards/EVS визитки.png" alt="EVS визитки" loading="lazy" />
+                    <div class="agency__item-overlay">
+                      <span class="agency__item-title">EVS</span>
+                      <span class="agency__item-category">Визитка</span>
+                    </div>
+                  </div>
+                  <div class="agency__item" data-category="cards">
+                    <img src="img/rxt/cards/Renova_визитка.png" alt="Renova визитка" loading="lazy" />
+                    <div class="agency__item-overlay">
+                      <span class="agency__item-title">Renova</span>
+                      <span class="agency__item-category">Визитка</span>
+                    </div>
+                  </div>
+                  <div class="agency__item" data-category="cards">
+                    <img src="img/rxt/cards/WhatsApp Image 2022-09-04 at 14.03.01.jpeg" alt="Визитка" loading="lazy" />
+                    <div class="agency__item-overlay">
+                      <span class="agency__item-title">Дизайн визитки</span>
+                      <span class="agency__item-category">Визитка</span>
+                    </div>
+                  </div>
+                  <div class="agency__item" data-category="cards">
+                    <img src="img/rxt/cards/White Crystal (Визитка)_page-0001.jpg" alt="White Crystal" loading="lazy" />
+                    <div class="agency__item-overlay">
+                      <span class="agency__item-title">White Crystal</span>
+                      <span class="agency__item-category">Визитка</span>
+                    </div>
+                  </div>
+                  <div class="agency__item" data-category="cards">
+                    <img src="img/rxt/cards/Визитка_СИС.jpg" alt="СИС визитка" loading="lazy" />
+                    <div class="agency__item-overlay">
+                      <span class="agency__item-title">СИС</span>
+                      <span class="agency__item-category">Визитка</span>
+                    </div>
+                  </div>
+                  <div class="agency__item" data-category="cards">
+                    <img src="img/rxt/cards/Кроссовки_визитка_page-0001.jpg" alt="Кроссовки визитка" loading="lazy" />
+                    <div class="agency__item-overlay">
+                      <span class="agency__item-title">Кроссовки</span>
+                      <span class="agency__item-category">Визитка</span>
+                    </div>
+                  </div>
+                  <div class="agency__item" data-category="cards">
+                    <img src="img/rxt/cards/Снимок экрана 2022-09-29 в 18.57.42.png" alt="Визитка" loading="lazy" />
+                    <div class="agency__item-overlay">
+                      <span class="agency__item-title">Дизайн визитки</span>
+                      <span class="agency__item-category">Визитка</span>
+                    </div>
+                  </div>
+                  <div class="agency__item" data-category="cards">
+                    <img src="img/rxt/cards/СОМНИУМ ГРУПП (Визитка).png" alt="СОМНИУМ ГРУПП" loading="lazy" />
+                    <div class="agency__item-overlay">
+                      <span class="agency__item-title">Сомниум Групп</span>
+                      <span class="agency__item-category">Визитка</span>
+                    </div>
+                  </div>
+                  <div class="agency__item" data-category="cards">
+                    <img src="img/rxt/cards/ТАБАК (визитка).png" alt="ТАБАК визитка" loading="lazy" />
+                    <div class="agency__item-overlay">
+                      <span class="agency__item-title">Табак</span>
+                      <span class="agency__item-category">Визитка</span>
+                    </div>
+                  </div>
+                  <div class="agency__item" data-category="cards">
+                    <img src="img/rxt/cards/ЧащинДом_визитка.png" alt="ЧащинДом визитка" loading="lazy" />
+                    <div class="agency__item-overlay">
+                      <span class="agency__item-title">ЧащинДом</span>
+                      <span class="agency__item-category">Визитка</span>
+                    </div>
+                  </div>
+
+                  <!-- Blanks (Vertical) -->
+                  <div class="agency__item" data-category="blanks">
+                    <img src="img/rxt/blanks/Free 2 Flying Flyer Mockup.png" alt="Flyer Mockup" loading="lazy" />
+                    <div class="agency__item-overlay">
+                      <span class="agency__item-title">Листовка</span>
+                      <span class="agency__item-category">Полиграфия</span>
+                    </div>
+                  </div>
+                  <div class="agency__item" data-category="blanks">
+                    <img src="img/rxt/blanks/БатСтрой.jpg" alt="Бланк БатСтрой" loading="lazy" />
+                    <div class="agency__item-overlay">
+                      <span class="agency__item-title">БатСтрой</span>
+                      <span class="agency__item-category">Полиграфия</span>
+                    </div>
+                  </div>
+                  <div class="agency__item" data-category="blanks">
+                    <img src="img/rxt/blanks/Бланк Святогорье.jpg" alt="Бланк Святогорье" loading="lazy" />
+                    <div class="agency__item-overlay">
+                      <span class="agency__item-title">Святогорье</span>
+                      <span class="agency__item-category">Полиграфия</span>
+                    </div>
+                  </div>
+                  <div class="agency__item" data-category="blanks">
+                    <img src="img/rxt/blanks/Листовка (Варган).png" alt="Листовка Варган" loading="lazy" />
+                    <div class="agency__item-overlay">
+                      <span class="agency__item-title">Варган</span>
+                      <span class="agency__item-category">Полиграфия</span>
+                    </div>
+                  </div>
+                  <div class="agency__item" data-category="blanks">
+                    <img src="img/rxt/blanks/Макет Листовки 3.jpg" alt="Макет Листовки" loading="lazy" />
+                    <div class="agency__item-overlay">
+                      <span class="agency__item-title">Макет листовки</span>
+                      <span class="agency__item-category">Полиграфия</span>
+                    </div>
+                  </div>
+                  <div class="agency__item" data-category="blanks">
+                    <img src="img/rxt/blanks/Макет Листовки.jpg" alt="Макет Листовки" loading="lazy" />
+                    <div class="agency__item-overlay">
+                      <span class="agency__item-title">Макет листовки</span>
+                      <span class="agency__item-category">Полиграфия</span>
+                    </div>
+                  </div>
+                  <div class="agency__item" data-category="blanks">
+                    <img src="img/rxt/blanks/Сертификат (макет).jpg" alt="Сертификат" loading="lazy" />
+                    <div class="agency__item-overlay">
+                      <span class="agency__item-title">Сертификат</span>
+                      <span class="agency__item-category">Полиграфия</span>
+                    </div>
+                  </div>
+                  <div class="agency__item" data-category="blanks">
+                    <img src="img/rxt/blanks/Табак (листовка)@3x.jpg" alt="Табак листовка" loading="lazy" />
+                    <div class="agency__item-overlay">
+                      <span class="agency__item-title">Табак</span>
+                      <span class="agency__item-category">Полиграфия</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="swiper__img swiper-slide">
-              <img
-                src="img/svg/swiper/02.svg"
-                alt="py logo"
-                width="50"
-                height="50"
-              />
+
+            <div class="agency__stats">
+              <div class="agency__stat">
+                <span class="agency__stat-number">100+</span>
+                <span class="agency__stat-label">Проектов</span>
+              </div>
+              <div class="agency__stat">
+                <span class="agency__stat-number">30+</span>
+                <span class="agency__stat-label">Сайтов</span>
+              </div>
+              <div class="agency__stat">
+                <span class="agency__stat-number">20+</span>
+                <span class="agency__stat-label">Визиток</span>
+              </div>
+              <div class="agency__stat">
+                <span class="agency__stat-number">50+</span>
+                <span class="agency__stat-label">Полиграфия</span>
+              </div>
             </div>
-            <div class="swiper__img swiper-slide">
-              <img
-                src="img/svg/swiper/03.svg"
-                alt="ts logo"
-                width="50"
-                height="50"
-              />
-            </div>
-            <div class="swiper__img swiper-slide">
-              <img
-                src="img/svg/swiper/04.svg"
-                alt="java logo"
-                width="50"
-                height="50"
-              />
-            </div>
-            <div class="swiper__img swiper-slide">
-              <img
-                src="img/svg/swiper/05.svg"
-                alt="git logo"
-                width="60"
-                height="60"
-              />
-            </div>
-            <div class="swiper__img swiper-slide">
-              <img
-                src="img/svg/swiper/06.svg"
-                alt="nextjs logo"
-                width="50"
-                height="50"
-              />
+          </div>
+        </section>
+
+        <div class="page__swiper">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="swiper__img">
+                  <img
+                    src="img/svg/swiper/01.svg"
+                    alt="js logo"
+                    width="70"
+                    height="70"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper__img">
+                  <img
+                    src="img/svg/swiper/02.svg"
+                    alt="py logo"
+                    width="50"
+                    height="50"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper__img">
+                  <img
+                    src="img/svg/swiper/03.svg"
+                    alt="ts logo"
+                    width="50"
+                    height="50"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper__img">
+                  <img
+                    src="img/svg/swiper/04.svg"
+                    alt="java logo"
+                    width="50"
+                    height="50"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper__img">
+                  <img
+                    src="img/svg/swiper/05.svg"
+                    alt="git logo"
+                    width="60"
+                    height="60"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper__img">
+                  <img
+                    src="img/svg/swiper/06.svg"
+                    alt="nextjs logo"
+                    width="50"
+                    height="50"
+                  />
+                </div>
+              </div>
+              <!-- Дубликаты для непрерывной прокрутки -->
+              <div class="swiper-slide">
+                <div class="swiper__img">
+                  <img
+                    src="img/svg/swiper/01.svg"
+                    alt="js logo"
+                    width="70"
+                    height="70"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper__img">
+                  <img
+                    src="img/svg/swiper/02.svg"
+                    alt="py logo"
+                    width="50"
+                    height="50"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper__img">
+                  <img
+                    src="img/svg/swiper/03.svg"
+                    alt="ts logo"
+                    width="50"
+                    height="50"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper__img">
+                  <img
+                    src="img/svg/swiper/04.svg"
+                    alt="java logo"
+                    width="50"
+                    height="50"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper__img">
+                  <img
+                    src="img/svg/swiper/05.svg"
+                    alt="git logo"
+                    width="60"
+                    height="60"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper__img">
+                  <img
+                    src="img/svg/swiper/06.svg"
+                    alt="nextjs logo"
+                    width="50"
+                    height="50"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -291,7 +796,7 @@
             <ul class="work__items">
               <li class="work__item">
                 <div class="work__header">
-                  <h2 class="work__title title">МОИ ПРОЕКТЫ</h2>
+                  <h2 class="work__title title">РАННИЕ ПРОЕКТЫ</h2>
                   <h3 class="work__subtitle subtitle">
                     Работы, сделанные с душой
                   </h3>
@@ -434,60 +939,6 @@
                 </div>
               </li>
             </ul>
-          </div>
-        </section>
-        <section class="page__instagram instagram">
-          <div class="instagram__container">
-            <div class="instagram__text">
-              <h3 class="instagram__subtitle subtitle">Instagram</h3>
-              <p class="instagram__description">
-                Если вы человек, который ценит приключения, открывает для себя
-                новые культуры и наслаждается красотой мира, то мой Instagram -
-                ваш незаменимый источник вдохновения! Подписывайтесь, чтобы быть
-                в курсе моих захватывающих путешествий по всему миру!
-                #TravelGoals #ExploreTheWorld
-              </p>
-              <a
-                href="https://www.instagram.com/nik_exck_08/"
-                target="_blank"
-                class="instagram__btn btn"
-                >Следить за мной в IG</a
-              >
-            </div>
-            <picture class="instagram__img">
-              <img
-                src="img/instagram/01.jpg"
-                alt="view from the plane. sunbeam clouds and sky"
-                width="720"
-                height="600"
-                loading="lazy"
-            /></picture>
-          </div>
-        </section>
-        <section class="page__vk vk">
-          <div class="vk__container">
-            <div class="vk__text">
-              <h3 class="vk__subtitle subtitle">VK</h3>
-              <p class="vk__description">
-                Если вы хотите поделиться со мной интересными мыслями, идеями
-                или просто пообщаться, пишите мне во ВКонтакте!
-              </p>
-              <a
-                href="https://vk.com/silenceiswild"
-                target="_blank"
-                class="vk__btn btn"
-                >Найти меня в VK</a
-              >
-            </div>
-            <picture class="vk__img">
-              <img
-                src="img/vk/01.png"
-                alt="A browser window with previews of various sites"
-                width="1076"
-                height="676"
-                loading="lazy"
-              />
-            </picture>
           </div>
         </section>
         <section id="response" class="page__response response">
@@ -699,6 +1150,7 @@
                   <li><a href="index.html#home" class="footer__link">Главная</a></li>
                   <li><a href="index.html#about" class="footer__link">Обо мне</a></li>
                   <li><a href="index.html#experience" class="footer__link">Опыт</a></li>
+                  <li><a href="index.html#agency" class="footer__link">RXT Agency</a></li>
 									<li><a href="index.html#work" class="footer__link">Проекты</a></li>
               </ul>
             </div>
@@ -735,5 +1187,115 @@
     </div>
     <script src="scripts/cdn.jsdelivr.net_npm_swiper@9.4.1_swiper-bundle.min.js"></script>
     <script src="scripts/main.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // ===== Header Scroll Effect =====
+        const header = document.querySelector('.header');
+        let lastScrollY = 0;
+        
+        window.addEventListener('scroll', () => {
+          const currentScrollY = window.scrollY;
+          
+          if (currentScrollY > 100) {
+            header.classList.add('header--scrolled');
+          } else {
+            header.classList.remove('header--scrolled');
+          }
+          
+          // Hide/show header on scroll
+          if (currentScrollY > lastScrollY && currentScrollY > 300) {
+            header.classList.add('header--hidden');
+          } else {
+            header.classList.remove('header--hidden');
+          }
+          
+          lastScrollY = currentScrollY;
+        });
+
+        // ===== Mobile Menu - Handled in main.min.js =====
+        // The burger menu logic is now in main.min.js
+
+        // ===== RXT Agency Filter =====
+        const filterButtons = document.querySelectorAll('.agency__filter-btn');
+        const items = document.querySelectorAll('.agency__item');
+
+        function applyFilter(filter) {
+          let visibleIndex = 0;
+          
+          items.forEach(item => {
+            const category = item.getAttribute('data-category');
+            item.classList.remove('fade-in');
+            
+            if (category === filter) {
+              item.classList.remove('hidden');
+              item.style.animationDelay = `${visibleIndex * 0.05}s`;
+              void item.offsetWidth;
+              item.classList.add('fade-in');
+              visibleIndex++;
+            } else {
+              item.classList.add('hidden');
+            }
+          });
+        }
+
+        // Filter click handler
+        filterButtons.forEach(button => {
+          button.addEventListener('click', function() {
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            applyFilter(this.getAttribute('data-filter'));
+          });
+        });
+
+        // Initialize with "sites" filter (default active)
+        applyFilter('sites');
+
+        // ===== Smooth Scroll =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+              const headerHeight = header.offsetHeight;
+              const targetPosition = target.offsetTop - headerHeight;
+              
+              window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+              });
+            }
+          });
+        });
+
+        // ===== Hero Parallax Effect =====
+        const heroGradients = document.querySelectorAll('.hero__gradient');
+        
+        window.addEventListener('scroll', () => {
+          const scrolled = window.scrollY;
+          heroGradients.forEach((gradient, index) => {
+            const speed = 0.3 + (index * 0.1);
+            gradient.style.transform = `translateY(${scrolled * speed}px)`;
+          });
+        });
+
+        // ===== Intersection Observer for Animations =====
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('animate-in');
+            }
+          });
+        }, observerOptions);
+
+        document.querySelectorAll('.experience__item, .skillset__item, .work__card, .response__card').forEach(el => {
+          observer.observe(el);
+        });
+      });
+    </script>
   </body>
 </html>
