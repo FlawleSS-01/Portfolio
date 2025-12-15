@@ -1189,28 +1189,9 @@
     <script src="scripts/main.min.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
-        // ===== Header Scroll Effect =====
+        // ===== Header Scroll Effect - Handled in main.min.js =====
+        // The header scroll logic is now in main.min.js to avoid duplication
         const header = document.querySelector('.header');
-        let lastScrollY = 0;
-        
-        window.addEventListener('scroll', () => {
-          const currentScrollY = window.scrollY;
-          
-          if (currentScrollY > 100) {
-            header.classList.add('header--scrolled');
-          } else {
-            header.classList.remove('header--scrolled');
-          }
-          
-          // Hide/show header on scroll
-          if (currentScrollY > lastScrollY && currentScrollY > 300) {
-            header.classList.add('header--hidden');
-          } else {
-            header.classList.remove('header--hidden');
-          }
-          
-          lastScrollY = currentScrollY;
-        });
 
         // ===== Mobile Menu - Handled in main.min.js =====
         // The burger menu logic is now in main.min.js
@@ -1256,13 +1237,22 @@
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
-              const headerHeight = header.offsetHeight;
+              // Bug 3 fix: Check if header exists before accessing offsetHeight
+              const headerHeight = header ? header.offsetHeight : 0;
               const targetPosition = target.offsetTop - headerHeight;
               
               window.scrollTo({
                 top: targetPosition,
                 behavior: 'smooth'
               });
+              
+              // Bug 2 fix: Update active tab after smooth scroll completes
+              // Use setTimeout to wait for smooth scroll animation
+              setTimeout(() => {
+                if (typeof updateActiveTab === 'function') {
+                  updateActiveTab();
+                }
+              }, 500);
             }
           });
         });
