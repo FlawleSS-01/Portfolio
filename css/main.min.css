@@ -482,7 +482,6 @@ html {
 
 /* ===== Hero Section ===== */
 .hero {
-  min-height: 100vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -635,7 +634,7 @@ html {
 
 .hero__title-line {
   display: block;
-  font-size: 72px;
+  font-size: 64px;
   font-weight: 700;
   line-height: 1.1;
   background: linear-gradient(135deg, #fff 0%, rgba(255, 255, 255, 0.8) 100%);
@@ -847,7 +846,7 @@ html {
 
 .hero__image-wrapper {
   position: relative;
-  max-width: 450px;
+  max-width: 400px;
   margin: 0 auto;
 }
 
